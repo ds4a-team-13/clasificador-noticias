@@ -28,5 +28,7 @@ class ElNuevoDiaSpider(scrapy.Spider):
       news.add_value('titulo', titulo)
       news.add_value('cuerpo', cuerpo)
       news.add_value('hora', hora)
+      news.add_value('url', response.url)
+      news.add_value('diario', self.name)
       return news.load_item()
       
