@@ -5,6 +5,7 @@ from project.items import News
 
 class ElNuevoDiaSpider(scrapy.Spider):
     name = "elnuevodia"
+    current_page = 0
 
     def start_requests(self):
         urls = [
@@ -13,12 +14,29 @@ class ElNuevoDiaSpider(scrapy.Spider):
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
 
+
     def parse(self, response):
-      container = response.xpath('//div[@class="view-content"]')
-      for url in container.xpath('//article//header//a/@href').getall():
+      urlsPath = '//div[@class="view-content"]//article//header//a/@href'
+      datesPath = '//div[@class="view-content"]//article//time/@datetime'
+
+      for url in response.xpath(urlsPath).extract():
         next_page = response.urljoin(url)
         yield scrapy.Request(url=next_page, callback=self.read_news)
       
+      dates = response.xpath(datesPath).extract()
+      year = int(dates[-1][:4])
+     
+      if year == 2020:
+        if 'page' in response.url:
+          url = response.url[:-1] + str(self.current_page+1)
+        else:
+          url = response.url + '?page='+ str(self.current_page+1)
+
+        self.current_page = self.current_page + 1
+        yield scrapy.Request(url=url, callback=self.parse)
+      
+      
+
     def read_news(self, response):
       titulo = response.xpath('//div[@id="block-pagetitle"]//h1/span/text()').get()
       cuerpo = response.xpath('//div[@class="node-content"]//p//text()').getall()

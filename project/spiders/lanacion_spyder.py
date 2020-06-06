@@ -32,7 +32,7 @@ class LaNacionSpider(scrapy.Spider):
         if 'page' in response.url:
           url = response.url[:-2] + str(currentPage+1)
         else:
-          url = response.url + 'page/2'
+          url = response.url + 'page/' + str(currentPage+1)
 
         yield scrapy.Request(url=url, callback=self.parse)
 
