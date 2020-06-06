@@ -22,12 +22,15 @@ class ElNuevoDiaSpider(scrapy.Spider):
     def read_news(self, response):
       titulo = response.xpath('//div[@id="block-pagetitle"]//h1/span/text()').get()
       cuerpo = response.xpath('//div[@class="node-content"]//p//text()').getall()
-      hora   = response.xpath('//div[@class="node-content"]//time/@datetime').get()
+      fecha_publicacion   = response.xpath('//div[@class="node-content"]//time/@datetime').get()
+
+      # Date should has format: YYYY-MM-DDTHH:MM:SS
+      fecha_publicacion = fecha_publicacion[:19]
 
       news = ItemLoader(item=News())
       news.add_value('titulo', titulo)
       news.add_value('cuerpo', cuerpo)
-      news.add_value('hora', hora)
+      news.add_value('fecha_publicacion', fecha_publicacion)
       news.add_value('url', response.url)
       news.add_value('diario', self.name)
       return news.load_item()
