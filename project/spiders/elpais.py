@@ -1,6 +1,7 @@
 import scrapy
 from scrapy.loader import ItemLoader
 from project.items import News
+<<<<<<< HEAD
 
 
 class ElPaisSpider(scrapy.Spider):
@@ -53,3 +54,24 @@ class ElPaisSpider(scrapy.Spider):
       news.add_value('url', response.url)
       news.add_value('diario', self.name)
       return news.load_item()
+=======
+from project.spiders.simple_spider import SimpleSpider
+
+class ElPaisSpider(SimpleSpider):
+    name = "elpais"
+    baseUrl = 'https://www.elpais.com.co/page/lista-de-notas-judicial.html?page='
+    
+    urlsPath  = '//div[contains(@class, "listing-item")]//h2//a/@href'
+    datesPath = '//div[contains(@class, "listing-item")]//span[@class="schemeArticle"]/meta[@itemprop="dateModified"]/@content'
+    nextPagePath = '//nav//a[@class="next page-numbers"]'
+    
+    tituloPath = '//div[@class="article-top row"]//h1/text()'
+    cuerpoPath = '//div[@class="article-content"]//p/text()'
+    fechaPath  = '//meta[@name="cXenseParse:recs:publishtime"]/@content'
+        
+
+    def format_fecha(self, fecha):
+      return fecha+'T00:00:00'
+    
+      
+>>>>>>> 9f247d84762b31780fb7f46aaec773cac57e2e5a

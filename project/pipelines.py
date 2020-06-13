@@ -41,11 +41,34 @@ class SqlitePipeline:
         self.conn.close()
 
     def process_item(self, item, spider):
-        print(item['titulo'])
-        self.cursor.execute('INSERT INTO news VALUES (?,?,?,?,?)', 
+        #print(item['titulo'])
+        self.cursor.execute('INSERT INTO news VALUES (?,?,?,?,?, ?)', 
             (item['titulo'], item['cuerpo'], item['fecha_publicacion'], item['diario'], 
-            item['url']))
+            item['url'], item['page']))
 
         self.conn.commit()
 
         return item
+
+
+class LastPagePipeline:
+    """
+        This pipeline is intended to load the last page scrapped for each 
+        newspaper
+    """
+
+    def open_spider(self, spider):
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+        result = cursor.execute('''
+                        SELECT page FROM news WHERE diario=? 
+                        ORDER BY page DESC
+                        LIMIT 1
+                    ''', (spider.name,))
+
+        result = cursor.fetchone()
+        spider.last_page = result[0] if result else 1
+        conn.close()
+
+    def close_spider(self, spider):
+        pass
