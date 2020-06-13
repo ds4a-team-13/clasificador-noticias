@@ -22,3 +22,4 @@ class News(scrapy.Item):
     fecha_publicacion = Field(output_processor=date_processor)
     url    = Field(output_processor=TakeFirst())
     diario = Field(output_processor=TakeFirst())
+    page   = Field(output_processor=TakeFirst())
