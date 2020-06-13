@@ -14,7 +14,7 @@ class SimpleSpider(BaseSpider):
         yield scrapy.Request(url=next_page, callback=self.read_news)
       
       dates = response.xpath(self.datesPath).extract()
-      year = int(dates[-1][:4])
+      year = int(dates[-1].strip()[:4])
 
       existsNextPage = response.xpath(self.nextPagePath).extract()
       if year >= self.min_year and existsNextPage:

@@ -15,10 +15,10 @@ runner = CrawlerRunner(get_project_settings())
 @defer.inlineCallbacks
 def crawl():
     yield runner.crawl(ElDiarioSpider)
-    yield runner.crawl(ElNuevoDiaSpider)
     yield runner.crawl(ElPaisSpider)
-    yield runner.crawl(DiarioMagdalenaSpider)
+    #yield runner.crawl(DiarioMagdalenaSpider)
     yield runner.crawl(LaNacionSpider)
+    yield runner.crawl(ElNuevoDiaSpider)
     reactor.stop()
 
 crawl()
