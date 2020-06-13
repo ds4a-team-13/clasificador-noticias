@@ -51,15 +51,15 @@ Las fuentes son:
 - [] www.diariodelhuila.com
 
 **La Guajira**
-- [] laguajirahoy.com
+- [] laguajirahoy.com  -> autoscroll
 
 **Magdalena**
-- [] www.hoydiariodelmagdalena?
-- [] www.el-informador.com
+- [X] www.hoydiariodelmagdalena.com.co
+- [] www.elinformador.com.co
 
 **Nariño**
 - [] www.hsbnoticias.com
-- [] diariodelsur.com
+- [] diariodelsur.com <- Ya no existe
 
 **Norte de Santander**
 - [] www.laopinion.com.co
@@ -77,7 +77,7 @@ Las fuentes son:
 - [] www.elmeridianodesucre.com -> No existe
 
 **Tolima**
-- [X] www.elnuevodia.com.co *
+- [X] www.elnuevodia.com.co
 
 **Valle del Cauca**
 - [X] www.elpais.com.co

@@ -24,6 +24,7 @@ class BaseSpider(scrapy.Spider):
 
     def start_requests(self):
         self.current_page = self.last_page
+        
         urls = [
             self.baseUrl + str(self.current_page),
         ]

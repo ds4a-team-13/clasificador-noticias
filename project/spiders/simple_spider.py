@@ -8,7 +8,7 @@ class SimpleSpider(BaseSpider):
     
     def parse(self, response):
       print('parsing: ', response.url)
-      
+
       for url in response.xpath(self.urlsPath).extract():
         next_page = response.urljoin(url)
         yield scrapy.Request(url=next_page, callback=self.read_news)
