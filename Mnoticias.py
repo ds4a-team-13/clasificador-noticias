@@ -15,6 +15,9 @@ def read_news():
 def crear_listado_noticias(df, listado):
 
     for i in range(df.shape[0]):
-        listado.append(dbc.ListGroupItem(df['titulo'].loc[i]))
+        listado.append(dbc.ListGroupItem(
+            df['titulo'].loc[i])
+            id="noticia_" + str(i)
+            )
 
     return listado
