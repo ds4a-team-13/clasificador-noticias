@@ -10,7 +10,18 @@ from Mnoticias import *
 df = read_news()
 df = df.iloc[0:10]
 
-lista_news = [step]
+lista_news = [
+    dbc.ListGroupItem("Noticia 1", color="secondary"),
+    dbc.ListGroupItem("Noticia 2", color="secondary"),
+    dbc.ListGroupItem("Noticia 3", color="secondary"),
+    dbc.ListGroupItem("Noticia 4", color="secondary"),
+    dbc.ListGroupItem("Noticia 5", color="secondary"),
+    dbc.ListGroupItem("Noticia 6", color="secondary"),
+    dbc.ListGroupItem("Noticia 7", color="secondary"),
+    # dbc.ListGroupItem("Noticia 8", color="secondary"),
+    # dbc.ListGroupItem("Noticia 9", color="secondary"),
+    # dbc.ListGroupItem("Noticia 10", color="secondary"),
+]
 
 app = dash.Dash(external_stylesheets=[dbc.themes.LUX])
 app.title='UVict'
@@ -46,22 +57,10 @@ app.layout = dbc.Container(fluid=True, children=[
         dbc.Col(html.P('COLUMNA1'),
                 width=2
         ),
-        dbc.Col(width='auto',
+        dbc.Col(width=3,
             children=[
             html.H5('Listado de noticias', style={'color':colors['text']}),
-            dbc.ListGroup(
-                [
-                    dbc.ListGroupItem("Noticia 1", color="secondary"),
-                    dbc.ListGroupItem("Noticia 2", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 3", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 4", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 5", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 6", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 7", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 8", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 9", color="secondary"),
-                    # dbc.ListGroupItem("Noticia 10", color="secondary"),
-                ],
+            dbc.ListGroup(children=lista_news,
                 id="Listado_noticias"
             )
         ]),
@@ -170,11 +169,15 @@ app.layout = dbc.Container(fluid=True, children=[
 # Pone las noticias en la lista
 @app.callback(Output('Listado_noticias', 'children'), [Input('Obtener noticias', 'n_clicks')])
 def on_button_click(n_clicks):
+
+    global lista_news
+    global df
+
     if n_clicks is None:
-        return "OK"
-    else:
-        lista_news += [dbc.ListGroupItem("Not Not Ok")]
         return lista_news
+    else:
+        lista_news = []
+        return crear_listado_noticias(df, lista_news)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
