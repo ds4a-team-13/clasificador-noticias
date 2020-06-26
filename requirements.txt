@@ -1,0 +1,6 @@
+scrapy
+jupyter-notebook
+pandas
+numpy
+dash
+plotly
