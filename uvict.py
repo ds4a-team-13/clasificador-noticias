@@ -10,20 +10,10 @@ from Mnoticias import *
 df = read_news()
 df = df.iloc[0:10]
 
-lista_news = [
-    dbc.ListGroupItem("Noticia 1", color="secondary"),
-    dbc.ListGroupItem("Noticia 2", color="secondary"),
-    dbc.ListGroupItem("Noticia 3", color="secondary"),
-    dbc.ListGroupItem("Noticia 4", color="secondary"),
-    dbc.ListGroupItem("Noticia 5", color="secondary"),
-    dbc.ListGroupItem("Noticia 6", color="secondary"),
-    dbc.ListGroupItem("Noticia 7", color="secondary"),
-    # dbc.ListGroupItem("Noticia 8", color="secondary"),
-    # dbc.ListGroupItem("Noticia 9", color="secondary"),
-    # dbc.ListGroupItem("Noticia 10", color="secondary"),
-]
-
-app = dash.Dash(external_stylesheets=[dbc.themes.LUX])
+#app = dash.Dash(external_stylesheets=[dbc.themes.LUX])
+#app = dash.Dash(estilos.css)
+external_stylesheets = [dbc.themes.LUX,'https://github.com/ds4a-team-13/scraper-noticias/blob/master/estilos.css']
+app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=external_stylesheets)
 app.title='UVict'
 
 # Define colors
@@ -33,6 +23,7 @@ colors = {
     'Nada': '#b2b5df'
 }
 
+lista_news = []
 categoria_noticia = 'HECHO ARMADO'
 probabilidad_noticia = '(90%)'
 titulo_noticia = 'TITULO DE LA NOTICIA'
@@ -60,8 +51,10 @@ app.layout = dbc.Container(fluid=True, children=[
         dbc.Col(width=3,
             children=[
             html.H5('Listado de noticias', style={'color':colors['text']}),
-            dbc.ListGroup(children=lista_news,
-                id="Listado_noticias"
+            dbc.RadioItems(options=lista_news,
+                id="Listado_noticias",
+                style={"overflow":"scroll","height":500},
+                value=-1
             )
         ]),
         dbc.Col(width=7,
@@ -91,11 +84,12 @@ app.layout = dbc.Container(fluid=True, children=[
                 html.Div(children=
                     [
                         html.Br(),
-                        dbc.Col("Prueba", id="Titulo noticia"),
                         html.H3(
                                     titulo_noticia,
-                                    style={'text-align':'center'},
-                                    # id="Titulo noticia"
+                                    style={'text-align':'center',
+                                            'width':700,
+                                            'offset':1},
+                                    id="Titulo noticia"
                                 ),
                         dbc.Row(children=
                             [
@@ -104,13 +98,18 @@ app.layout = dbc.Container(fluid=True, children=[
                                         dcc.Markdown('**Fecha:**'),
                                         width={'size':'auto', 'offset':1}
                                     ),
-                                dbc.Col(html.P(fecha_noticia))
+                                dbc.Col(html.P(fecha_noticia,
+                                                id="fecha noticia"))
                             ]),
                         dbc.Row(children=
                             [
                                 dbc.Col
                                     (
-                                        dcc.Markdown(cuerpo_noticia),
+                                        dcc.Markdown(cuerpo_noticia,
+                                                    id="cuerpo noticia",
+                                                    style={"overflow":"scroll",
+                                                    "height":200,
+                                                    "width":800}),
                                         width={'size':10, 'offset':1}
                                     ),
                                 dbc.Col(width=1)
@@ -119,7 +118,10 @@ app.layout = dbc.Container(fluid=True, children=[
                             [
                                 dbc.Col
                                     (
-                                        dcc.Markdown('**Vinculo:**'),
+                                        dcc.Link(children=hiper_vinculo_noticia,
+                                                href='',
+                                                target="_blank",
+                                                id="vinculo noticia"),
                                         width={'size':'auto', 'offset':1}
                                     ),
                                 dbc.Col(dcc.Markdown('''
@@ -167,7 +169,7 @@ app.layout = dbc.Container(fluid=True, children=[
 ])
 
 # Pone las noticias en la lista
-@app.callback(Output('Listado_noticias', 'children'), [Input('Obtener noticias', 'n_clicks')])
+@app.callback(Output('Listado_noticias', 'options'), [Input('Obtener noticias', 'n_clicks')])
 def on_button_click(n_clicks):
 
     global lista_news
@@ -178,6 +180,29 @@ def on_button_click(n_clicks):
     else:
         lista_news = []
         return crear_listado_noticias(df, lista_news)
+
+# Pone la noticia seleccionada en la ventanita
+@app.callback([
+    Output('Titulo noticia', 'children'),
+    Output('fecha noticia', 'children'),
+    Output('cuerpo noticia', 'children'),
+    Output('vinculo noticia', 'children'),
+    Output('vinculo noticia', 'href')
+], [Input('Listado_noticias', 'value')])
+def on_button_click(valor):
+    if valor>=0:
+        return df['titulo'].iloc[valor],\
+                df['fecha_publicacion'].iloc[valor],\
+                df['cuerpo'].iloc[valor],\
+                df['url'].iloc[valor],\
+                df['url'].iloc[valor]
+    else:
+        return titulo_noticia,\
+                fecha_noticia,\
+                cuerpo_noticia,\
+                hiper_vinculo_noticia,\
+                hiper_vinculo_noticia
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
