@@ -3,6 +3,7 @@ from scrapy.loader import ItemLoader
 from project.items import News
 from project.spiders.simple_spider import SimpleSpider
 
+
 class ElPaisSpider(SimpleSpider):
     name = "elpais"
     baseUrl = 'https://www.elpais.com.co/page/lista-de-notas-judicial.html?page='
