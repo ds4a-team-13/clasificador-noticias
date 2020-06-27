@@ -162,9 +162,9 @@ app.layout = dbc.Container(fluid=True, children=[
                         outline=True,
                         disabled=True
                     )
-                ])
+                ]),
+            dbc.Col(width=1)
         ]
-
     )
 ])
 
