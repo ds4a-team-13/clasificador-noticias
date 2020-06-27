@@ -2,6 +2,7 @@ import scrapy
 from scrapy.loader import ItemLoader
 from project.items import News
 from project.spiders.simple_spider import SimpleSpider
+import datetime
 
 
 class ElDiarioSpider(SimpleSpider):
@@ -18,3 +19,6 @@ class ElDiarioSpider(SimpleSpider):
 
     def format_fecha(self, fecha):
       return fecha[:19]
+
+    def parse_list_date(self, date):
+      return datetime.datetime.fromisoformat(date)

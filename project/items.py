@@ -11,7 +11,8 @@ from scrapy import Field
 from datetime import datetime
 
 def text_processor(string):
-    return ''.join(string).strip()
+    string = [token.strip() for token in string]
+    return ' '.join(string).strip()
 
 def date_processor(date):
     return datetime.strptime(date[0], '%Y-%m-%dT%H:%M:%S')
