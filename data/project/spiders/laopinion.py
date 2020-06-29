@@ -1,11 +1,47 @@
 import scrapy
 from scrapy.loader import ItemLoader
 from project.items import News
-from project.spiders.base_spyder import BaseSpider
+from project.spiders.simple_spider import SimpleSpider
+from datetime import datetime
 
+class LaOpinionSpider(SimpleSpider):
+    date_pbl_min = datetime.now()
+    name = "laopinion"
+    baseUrl = 'https://www.laopinion.com.co/judicial?page='
 
-class SimpleSpider(BaseSpider):
+    urlsPath  = '//div[@class="mid"]//div[@class = "nota"]//h2/a/@href'
+    nextPagePath = '//ul[@class = "pager"]//a/@href'
 
+    tituloPath = '//h2[@class = "titulo"]/text()'
+    cuerpoPath = '//div[@class = "texto"]//div[@class = "field-item even"]/p/text()'
+    fechaPath  = '//div[@class = "fecha"]//span[@class = "date-display-single"]/text()'
+
+    def format_fecha(self, fecha):
+        
+      fecha = fecha.split(',')[-1]
+      fecha = fecha.strip().split()
+      
+      month = fecha[1].lower()
+      day   = fecha[0]
+      year  = fecha[2]
+      
+      months = {"enero": '01',
+          "febrero": '02',
+          "marzo": '03',
+		  "abril": '04',
+          "mayo": '05',
+          "junio": '06',
+          "julio": '07',
+          "agosto": '08',
+          "septiembre": '09',
+          "octubre": '10',
+          "noviembre": '11',
+          "diciembre": '12'}
+      
+      fecha = year + '-' + months[month] + '-' + day + 'T00:00:00'
+        
+      return fecha
+  
     def parse(self, response):
       print('parsing: ', response.url)
 
@@ -13,9 +49,8 @@ class SimpleSpider(BaseSpider):
         next_page = response.urljoin(url)
         yield scrapy.Request(url=next_page, callback=self.read_news)
       
-      dates = response.xpath(self.datesPath).extract()
-      #last_date = self.parse_list_date(dates[-1].strip())
-      last_date = self.parse_list_date(dates)
+      last_date = self.date_pbl_min
+      print('last_date:', last_date)
       year = last_date.year
 
       existsNextPage = response.xpath(self.nextPagePath).extract()
@@ -26,7 +61,7 @@ class SimpleSpider(BaseSpider):
         url = self.baseUrl + str(self.current_page)
         yield scrapy.Request(url=url, callback=self.parse)
 
-      elif  year > self.min_year and not existsNextPage:
+      elif year > self.min_year and not existsNextPage:
         print('-- Started google search')
         search_url = self.googleUrl if self.googleUrl else self.baseUrl 
 
@@ -35,14 +70,17 @@ class SimpleSpider(BaseSpider):
 
         yield scrapy.Request(url=url, callback=self.google_parse, headers=self.headers)
         
-
     def read_news(self, response):
+      print('simple_spider: read_news')
       titulo = response.xpath(self.tituloPath).get()
       cuerpo = response.xpath(self.cuerpoPath).getall()
       fecha_publicacion   = response.xpath(self.fechaPath).get()
       
       # Date should has format: YYYY-MM-DDTHH:MM:SS
       fecha_publicacion = self.format_fecha(fecha_publicacion)
+	  
+      if datetime.strptime(fecha_publicacion, '%Y-%m-%dT%H:%M:%S') < self.date_pbl_min:
+          self.date_pbl_min = datetime.strptime(fecha_publicacion, '%Y-%m-%dT%H:%M:%S')
 
       news = ItemLoader(item=News())
       news.add_value('titulo', titulo)
@@ -52,25 +90,3 @@ class SimpleSpider(BaseSpider):
       news.add_value('diario', self.name)
       news.add_value('page', self.current_page)
       return news.load_item()
-
-
-    def google_parse(self, response):
-      # This is an indicator to show that the news was obtained from google
-      self.current_page = -1
-
-      urls = response.xpath('//div[@class="rc"]//div[@class="r"]/a/@href').extract()
-      for url in urls:
-        yield scrapy.Request(url=url, callback=self.read_news)
-
-      next_page = response.xpath('//a[@id="pnnext"]/@href').get()
-      if next_page:
-          url = response.urljoin(next_page)
-          yield scrapy.Request(url=url, callback=self.google_parse)
-
-
-    def parse_list_date(self, date):
-      """
-        This method is intended to be defined in each subclass to 
-        return a datetime object
-      """
-      return date      
