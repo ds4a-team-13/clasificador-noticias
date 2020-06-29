@@ -10,7 +10,7 @@ Las fuentes son:
 - [] www.rcn.com.co
 - [] www.caracol.com.co
 - [] www.bluradio.com.co
-- [] www.elnuevosiglo.com.co
+- [X] www.elnuevosiglo.com.co
 
 **Antioquia**
 - [] www.elcolombiano.com
@@ -33,11 +33,11 @@ Las fuentes son:
 
 **Casanare y Putumayo**
 - [] www.prensalibrecasanare.com
-- [] miputumayo.com.co/author/MiPutumayo
+- [X] miputumayo.com.co/
 
 **Cauca**
-- [] www.elpueblo.com.co/
-- [] diariodelcauca.com.co
+- [X] www.elpueblo.com.co/
+- [X] diariodelcauca.com.co
 
 **César**
 - [] www.elpilon.com.co
@@ -47,8 +47,8 @@ Las fuentes son:
 - [] larazon.co
 
 **Huila**
-- [] www.lanacion.con.co
-- [] www.diariodelhuila.com
+- [X] www.lanacion.com.co -> Repetido (Ya está en Caquetá)
+- [X] www.diariodelhuila.com
 
 **La Guajira**
 - [] laguajirahoy.com  -> autoscroll
@@ -58,11 +58,11 @@ Las fuentes son:
 - [] www.elinformador.com.co
 
 **Nariño**
-- [] www.hsbnoticias.com
-- [] diariodelsur.com <- Ya no existe
+- [X] www.hsbnoticias.com
+- [] diariodelsur.com -> Ya no existe
 
 **Norte de Santander**
-- [] www.laopinion.com.co
+- [X] www.laopinion.com.co
 
 **Quindío**
 - [] www.cronicadelquindio.com
@@ -71,7 +71,7 @@ Las fuentes son:
 - [X] www.eldiario.com.co
 
 **Santander**
-- [] www.vanguardia.com
+- [] www.vanguardia.com -> Repetido (Ya está en César)
 
 **Sucre**
 - [] www.elmeridianodesucre.com -> No existe
