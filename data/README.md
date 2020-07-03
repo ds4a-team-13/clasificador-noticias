@@ -5,8 +5,8 @@ Proyecto para obtener las noticias de varios diarios colombianos.
 Las fuentes son: 
 
 **Bogotá**
-- [] www.eltiempo.com
-- [] elespectador.com
+- [] www.eltiempo.com         -> Autoscroll
+- [] elespectador.com         -> Toca suscribirse - no hay disponible historico en la página de judicial.
 - [] www.rcn.com.co           -> Autoscroll
 - [] www.caracol.com.co       -> Autoscroll
 - [] www.bluradio.com.co      -> Autoscroll (sólo carga una noticia cada vez que se le da "cargar más")
@@ -27,7 +27,7 @@ Las fuentes son:
 - [] www.eluniversal.com.co
 
 **Caldas**
-- [] www.lapatria.com.co
+- [] www.lapatria.com.co -> No contiene la estructura para ubicar el historico de las noticias.
 
 **Caquetá**
 - [X] www.lanacion.com.co
@@ -42,7 +42,7 @@ Las fuentes son:
 
 **César**
 - [] www.elpilon.com.co             -> No tiene histórico de noticias
-- [] www.vanguardia.com/cronologia
+- [] www.vanguardia.com/cronologia  -> La url tiene problemas porque tiene # en el link
 
 **Cordoba**
 - [] larazon.co                     -> Autoscroll
