@@ -19,7 +19,8 @@ class ElInformadorSpider(SimpleSpider):
     def format_fecha(self, fecha):
       return fecha[:19]
 
-    def parse_list_date(self, date):
+    def parse_list_date(self, dates):
+      date = dates[-1]
       return datetime.datetime.fromisoformat(date)
 
     def read_news(self, response):
