@@ -56,7 +56,7 @@ Las fuentes son:
 
 **Magdalena**
 - [X] www.hoydiariodelmagdalena.com.co
-- [] www.elinformador.com.co
+- [X] www.elinformador.com.co
 
 **Nariño**
 - [X] www.hsbnoticias.com
