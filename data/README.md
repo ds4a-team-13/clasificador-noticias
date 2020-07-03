@@ -27,7 +27,7 @@ Las fuentes son:
 - [] www.eluniversal.com.co
 
 **Caldas**
-- [] www.lapatria.com.co
+- [] www.lapatria.com.co -> No contiene la estructura para ubicar el historico de las noticias.
 
 **Caquetá**
 - [X] www.lanacion.com.co
