@@ -22,6 +22,7 @@ class DiarioDelHuilaSpider(SimpleSpider):
       return fecha + 'T00:00:00'
       
   
-    def parse_list_date(self, date):
+    def parse_list_date(self, dates):
+      date = dates[-1]
       return datetime.datetime.strptime(date, '%Y-%m-%d')
 

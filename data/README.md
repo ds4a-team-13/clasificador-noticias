@@ -5,76 +5,77 @@ Proyecto para obtener las noticias de varios diarios colombianos.
 Las fuentes son: 
 
 **Bogotá**
-- [] www.eltiempo.com
-- [] elespectador.com
-- [] www.rcn.com.co
-- [] www.caracol.com.co
-- [] www.bluradio.com.co
-- [] www.elnuevosiglo.com.co
+- [] www.eltiempo.com         -> Autoscroll
+- [] elespectador.com         -> Toca suscribirse - no hay disponible historico en la página de judicial.
+- [] www.rcn.com.co           -> Autoscroll
+- [] www.caracol.com.co       -> Autoscroll
+- [] www.bluradio.com.co      -> Autoscroll (sólo carga una noticia cada vez que se le da "cargar más")
+- [] www.wradio.com.co/       -> Autoscroll
+- [X] www.elnuevosiglo.com.co 
 
 **Antioquia**
 - [] www.elcolombiano.com
-- [] www.elmundo.com
+- [] www.elmundo.com          -> Autoscroll
 
 **Atlántico**
-- [] www.elheraldo.com.co
+- [] www.elheraldo.com.co     -> Autoscroll (hay muchas publicaciones sobre una misma noticia)
 
 **Arauca**
-- [] www.lavozdelcinaruco.com
+- [] www.lavozdelcinaruco.com -> No contiene una url que varie al cambiar el número de la página.
 
 **Bolivar**
 - [] www.eluniversal.com.co
 
 **Caldas**
-- [] www.lapatria.com.co
+- [] www.lapatria.com.co -> No contiene la estructura para ubicar el historico de las noticias.
 
 **Caquetá**
 - [X] www.lanacion.com.co
 
 **Casanare y Putumayo**
 - [] www.prensalibrecasanare.com
-- [] miputumayo.com.co/author/MiPutumayo
+- [X] miputumayo.com.co/
 
 **Cauca**
-- [] www.elpueblo.com.co/
-- [] diariodelcauca.com.co
+- [X] www.elpueblo.com.co/
+- [X] diariodelcauca.com.co
 
 **César**
-- [] www.elpilon.com.co
-- [] www.vanguardia.com/cronologia
+- [] www.elpilon.com.co             -> No tiene histórico de noticias
+- [] www.vanguardia.com/cronologia  -> La url tiene problemas porque tiene # en el link
 
 **Cordoba**
-- [] larazon.co
+- [] larazon.co                     -> Autoscroll
 
 **Huila**
-- [] www.lanacion.con.co
-- [] www.diariodelhuila.com
+- [X] www.lanacion.com.co           -> Repetido (Ya está en Caquetá)
+- [X] www.diariodelhuila.com
 
 **La Guajira**
-- [] laguajirahoy.com  -> autoscroll
+- [] laguajirahoy.com               -> Autoscroll
 
 **Magdalena**
 - [X] www.hoydiariodelmagdalena.com.co
-- [] www.elinformador.com.co
+- [X] www.elinformador.com.co
 
 **Nariño**
-- [] www.hsbnoticias.com
-- [] diariodelsur.com <- Ya no existe
+- [X] www.hsbnoticias.com
+- [] diariodelsur.com               -> Ya no existe
 
 **Norte de Santander**
-- [] www.laopinion.com.co
+- [X] www.laopinion.com.co
 
 **Quindío**
-- [] www.cronicadelquindio.com
+- [] www.cronicadelquindio.com      -> No tiene histórico de noticias
 
 **Risaralda**
 - [X] www.eldiario.com.co
 
 **Santander**
-- [] www.vanguardia.com
+- [] www.vanguardia.com             -> Repetido (Ya está en César)
 
 **Sucre**
-- [] www.elmeridianodesucre.com -> No existe
+- [] www.elmeridianodesucre.com     -> No existe
 
 **Tolima**
 - [X] www.elnuevodia.com.co

@@ -5,4 +5,12 @@ CREATE TABLE news(
   diario text, 
   url text,
   page int
-)
+);
+
+CREATE TABLE classified_news(
+  titulo text, 
+  cuerpo text, 
+  diario text, 
+  url text,
+  category text
+);
