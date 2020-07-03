@@ -42,7 +42,7 @@ Las fuentes son:
 
 **César**
 - [] www.elpilon.com.co             -> No tiene histórico de noticias
-- [] www.vanguardia.com/cronologia
+- [] www.vanguardia.com/cronologia  -> La url tiene problemas porque tiene # en el link
 
 **Cordoba**
 - [] larazon.co                     -> Autoscroll
