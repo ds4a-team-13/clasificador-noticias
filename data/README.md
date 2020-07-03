@@ -5,8 +5,8 @@ Proyecto para obtener las noticias de varios diarios colombianos.
 Las fuentes son: 
 
 **Bogotá**
-- [] www.eltiempo.com
-- [] elespectador.com
+- [] www.eltiempo.com         -> Autoscroll
+- [] elespectador.com         -> Toca suscribirse - no hay disponible historico en la página de judicial.
 - [] www.rcn.com.co           -> Autoscroll
 - [] www.caracol.com.co       -> Autoscroll
 - [] www.bluradio.com.co      -> Autoscroll (sólo carga una noticia cada vez que se le da "cargar más")
