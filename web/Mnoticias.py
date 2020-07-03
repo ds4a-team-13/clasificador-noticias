@@ -9,10 +9,12 @@ import os
 
 
 def read_news():
-    path = os.path.dirname(os.path.abspath(__file__))
-    db_path = path + '/../data/data.db'
-    cnx = sqlite3.connect(db_path)
-    df = pd.read_sql_query("SELECT * FROM news", cnx)
+    # path = os.path.dirname(os.path.abspath(__file__))
+    # db_path = path + '/../data/data.db'
+    # cnx = sqlite3.connect(db_path)
+    # df = pd.read_sql_query("SELECT * FROM news", cnx)
+    df = pd.read_csv('../data/con_ranking.csv')
+    df.sort_values(by='Ranking', ascending=False, inplace=True)
 
     return df
 
