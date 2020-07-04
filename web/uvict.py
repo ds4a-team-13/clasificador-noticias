@@ -44,6 +44,7 @@ app.layout = dbc.Container(fluid=True, children=[
     ),
     html.Br(),
     html.Br(),
+    # EL LAYOUT ESTÁ PENSADO EN TRES FILAS, CADA UNA CON TRES COLUMNAS
     dbc.Row(children=[
         dbc.Col(html.P('COLUMNA1'),
                 width=2
@@ -109,7 +110,7 @@ app.layout = dbc.Container(fluid=True, children=[
                                                     id="cuerpo noticia",
                                                     style={"overflow":"scroll",
                                                     "height":200,
-                                                    "width":800}),
+                                                    "width":'auto'}),
                                         width={'size':10, 'offset':1}
                                     ),
                                 dbc.Col(width=1)
