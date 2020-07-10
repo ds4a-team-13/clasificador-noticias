@@ -1,0 +1,14 @@
+{
+titulo: {type: 'str',
+		 description: 'title of the news'},
+cuerpo: {type: 'str',
+		 description: 'content of the news'},
+fecha_publicacion: {type: 'date',
+					description: 'publication date of the news in the format: YYYY-MM-DD HH:MM:SS'},
+diario: {type: 'str',
+		 description: 'name of the site web where information is extract'},
+url: {type: 'str',
+	  description: 'url associated to the news'},
+page: {type: 'int',
+	  description: 'number of the page where we extract the news'}, 	  
+}

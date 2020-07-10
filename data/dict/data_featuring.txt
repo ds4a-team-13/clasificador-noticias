@@ -1,0 +1,41 @@
+{
+titulo: {type: 'str',
+		 description: 'title of the news'},
+cuerpo: {type: 'str',
+		 description: 'content of the news'},
+fecha_publicacion: {type: 'date',
+					description: 'publication date of the news in the format: YYYY-MM-DD HH:MM:SS'},
+diario: {type: 'str',
+		 description: 'name of the site web where information is extract'},
+url: {type: 'str',
+	  description: 'url associated to the news'},
+page: {type: 'int',
+	  description: 'number of the page where we extract the news'}, 
+
+year: {type: 'int',
+	   description: 'year extract from fecha_publicacion'},
+
+month: {type: 'int',
+	   description: 'month extract from fecha_publicacion'},
+
+week: {type: 'int',
+	   description: ' Week number of year, Sunday as the first day of week, extract from fecha_publicacion'},
+
+id: {type: 'str',
+	 description: 'b64encode of the url for generate unique id for the news'},
+
+text: {type: 'str',
+	   description: 'concatenation of the features titulo and cuerpo'},
+
+pre_clean_text: {type: 'str',
+	             description: 'process for the feature text where transform to lowercase, remove punctuation, remove accents, remove numbers, remove stopwords from scipy and nltk packages, validate if the word is in alphabet and validate if the word has more than two letters'},
+
+clean_text: {type: 'str',
+	         description: 'process for the feature pre_clean_text where we make stemming and remove names from external file stopwords_names.txt'},
+
+municipios: {type: 'str',
+			 description: 'contains town mentioned in the news. This town was obtained from the external file dane_municipios_colombia.txt. If there are more than one town, these are separated by |'}
+
+departamentos: {type: 'str',
+			    description: 'contains regions mentioned in the news. This region was obtained from the external file dane_municipios_colombia.txt. If there are more than one region, these are separated by |'}
+}

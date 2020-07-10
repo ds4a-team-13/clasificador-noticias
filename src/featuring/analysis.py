@@ -13,6 +13,7 @@ from src.featuring.requirements import *
 cnx = sqlite3.connect('data/scraper/data.db')
 df = pd.read_sql_query("SELECT * FROM news", cnx)
 
+df.head()
 print(df.shape)
 #print(df['diario'].unique())
 #(
@@ -38,6 +39,8 @@ df['week'] = [datetime.strftime(x, '%U') for x in df['fecha_publicacion']]
 # In order for the id to look actually like a unique identifier, let's use base64 encode to convert the id to a base64 string
 # The command converts the newly created id column into bytes, and then gets the base64 encoded value for the same. 
 # Then the base64 value is converted to string again and then stored in the id column.
+
+#.str.replace('https://', '').str.replace('www.', '')
 df['id'] = df['url'].apply(lambda x: b64encode(x.encode()).decode())
 
 # how long is the body per news
@@ -174,38 +177,46 @@ df['municipios'].str.split('|').apply(len).value_counts()
 df['departamentos'].fillna('', inplace = True)
 df['departamentos'].str.split('|').apply(len).value_counts()
 
-x = df['municipios'].iloc[2]
-df_dane[df_dane['municipio'].isin(x.split('|'))]['departamento']
+#x = df['municipios'].iloc[2]
+#df_dane[df_dane['municipio'].isin(x.split('|'))]['departamento']
 
-#df.to_csv('data/featuring/df.txt', sep = '|', index = False)
+#df.drop_duplicates(['id'], inplace = True)
+#df.to_csv('data/featuring/data_featuring.txt', sep = '|', index = False)
 
-df = pd.read_csv('data/featuring/df.txt', sep = '|')
-
-
-x = df['pre_clean_text'].iloc[:3]
-
-nlp = es_core_news_sm.load()
-
-doc = nlp(x)
-
-df_names = pd.read_csv('data/external/stopwords_names.txt')
-	
-names = list(df_names['name'])
-#tags = [(w.text, w.pos_) for w in doc]
-
-tags_pos = x.apply(process_tags_spanish)
-
-dict(tags_pos)
-
-len(tags_pos.iloc[1])
-
-tags_pos.iloc[1]
-
-len(list(pd.core.common.flatten(tags_pos.iloc[1].values())))
-
+# =============================================================================
+# 
+# =============================================================================
+df = pd.read_csv('data/featuring/data_featuring.txt', sep = '|')
 
 df.head()
-aux = df[df['id'].duplicated()]
+
+df.set_index(['id'], inplace = True)
+x = df['pre_clean_text'].iloc[:3]
+
+#nlp = es_core_news_sm.load()
+#doc = nlp(x)
+
+#df_names = pd.read_csv('data/external/stopwords_names.txt')
+#	
+#names = list(df_names['name'])
+#tags = [(w.text, w.pos_) for w in doc]
+
+tags_pos = master_tags_spanish(x)
+
+dict(tags_pos).keys()
+
+len(df['id'].unique())
+
+#df.loc['aHR0cHM6Ly9kaWFyaW9kZWxjYXVjYS5jb20uY28vbm90aWNpYXMvanVkaWNpYWwvZXhwbGljYXJvbi1lbC10cmFzbGFkby1kZS1jdWVycG9zLXBvc2libGVtZW50ZS1jb250YWdpYWRvcy1wLTYxMzQ3NA==', :]
+#len(list(pd.core.common.flatten(tags_pos.iloc[1].values())))
+
+
+#aux = df[df['id'].duplicated()]
+#aux['id'].iloc[0]
+
+
+#s = 'aHR0cHM6Ly93d3cuZWxkaWFyaW8uY29tLmNvL2p1ZGljaWFsL2VkaXRvcndlYmVsZGlhcmlvLWNvbS1jby8zMDAta2lsb3MtZGUtZHJvZ2EtY29uZmlzY2Fkb3Mv'
+#df[df['id'] == s]
 
 df.shape
 df.drop_duplicates(['id']).shape

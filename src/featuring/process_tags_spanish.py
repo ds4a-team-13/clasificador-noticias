@@ -2,7 +2,7 @@ import pandas as pd
 import es_core_news_sm                 # Tagger model in spanish
 #from collections import defaultdict
 
-def process_tags_spanish(x: str) -> list:
+def process_tags_spanish(x: str, names: list, nlp) -> list:
 	"""
 	This function extract tags of one string
 	@input: 
@@ -22,7 +22,7 @@ def process_tags_spanish(x: str) -> list:
 	
 	return tags
 
-def master_tags_spanish(serie_word: pd.Series) -> pd.Series:
+def master_tags_spanish(serie_word: pd.Series):
 	"""
 	This function apply the above function to each news
 	
@@ -39,8 +39,9 @@ def master_tags_spanish(serie_word: pd.Series) -> pd.Series:
 	names = list(df_names['name'])
 	
 	# applying the above function to each text
-	tags_pos = serie_word.apply(process_tags_spanish)
-	
+	tags_pos = serie_word.apply(lambda x: process_tags_spanish(x, names, nlp))
+	tags_pos = dict(tags_pos)
+		
 	return tags_pos
 	
 	

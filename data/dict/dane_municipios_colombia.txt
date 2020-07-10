@@ -1,0 +1,10 @@
+{
+departamento: {type: 'str', 
+               description: 'region of Colombia that group the municipio feature'},
+			   
+municipio: {type: 'str', 
+            description: 'town of Colombia'},
+			
+codigo_municipio: {type: 'int', 
+                   description: 'dane code for the feature municipio'}
+}

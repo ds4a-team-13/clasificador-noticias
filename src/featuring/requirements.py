@@ -8,3 +8,4 @@ from stop_words import get_stop_words  # stopwords from scipy
 from nltk import SnowballStemmer       # Stemming (word root)
 from unidecode import unidecode        # Removal of accents
 import es_core_news_sm                 # Tagger model in spanish
+import pickle

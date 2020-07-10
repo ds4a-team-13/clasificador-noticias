@@ -24,6 +24,7 @@ def filter_data(df: pd.DataFrame) -> pd.DataFrame:
 	# The command converts the newly created id column into bytes, and then gets the base64 encoded value for the same. 
 	# Then the base64 value is converted to string again and then stored in the id column.
 	df['id'] = df['url'].apply(lambda x: b64encode(x.encode()).decode())
+	df.drop_duplicates(['id'], inplace = True)
 	
 	# how long is the body per news
 	df['long_cuerpo'] = df['cuerpo'].apply(lambda x: len(x.split()))
