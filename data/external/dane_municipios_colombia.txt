@@ -1,0 +1,1126 @@
+departamento|municipio|codigo_municipio
+otro|no residente en el pais|99
+antioquia|medellin|5001
+antioquia|abejorral|5002
+antioquia|abriaqui|5004
+antioquia|alejandria|5021
+antioquia|amaga|5030
+antioquia|amalfi|5031
+antioquia|andes|5034
+antioquia|angelopolis|5036
+antioquia|angostura|5038
+antioquia|anori|5040
+antioquia|santafe de antioquia|5042
+antioquia|anza|5044
+antioquia|apartado|5045
+antioquia|arboletes|5051
+antioquia|argelia|5055
+antioquia|armenia|5059
+antioquia|barbosa|5079
+antioquia|belmira|5086
+antioquia|bello|5088
+antioquia|betania|5091
+antioquia|betulia|5093
+antioquia|ciudad bolivar|5101
+antioquia|briceno|5107
+antioquia|buritica|5113
+antioquia|caceres|5120
+antioquia|caicedo|5125
+antioquia|caldas|5129
+antioquia|campamento|5134
+antioquia|canasgordas|5138
+antioquia|caracoli|5142
+antioquia|caramanta|5145
+antioquia|carepa|5147
+antioquia|el carmen de viboral|5148
+antioquia|carolina|5150
+antioquia|caucasia|5154
+antioquia|chigorodo|5172
+antioquia|cisneros|5190
+antioquia|cocorna|5197
+antioquia|concepcion|5206
+antioquia|concordia|5209
+antioquia|copacabana|5212
+antioquia|dabeiba|5234
+antioquia|don matias|5237
+antioquia|ebejico|5240
+antioquia|el bagre|5250
+antioquia|entrerrios|5264
+antioquia|envigado|5266
+antioquia|fredonia|5282
+antioquia|frontino|5284
+antioquia|giraldo|5306
+antioquia|girardota|5308
+antioquia|gomez plata|5310
+antioquia|granada|5313
+antioquia|guadalupe|5315
+antioquia|guarne|5318
+antioquia|guatape|5321
+antioquia|heliconia|5347
+antioquia|hispania|5353
+antioquia|itagui|5360
+antioquia|ituango|5361
+antioquia|jardin|5364
+antioquia|jerico|5368
+antioquia|la ceja|5376
+antioquia|la estrella|5380
+antioquia|la pintada|5390
+antioquia|la union|5400
+antioquia|liborina|5411
+antioquia|maceo|5425
+antioquia|marinilla|5440
+antioquia|montebello|5467
+antioquia|murindo|5475
+antioquia|mutata|5480
+antioquia|narino|5483
+antioquia|necocli|5490
+antioquia|nechi|5495
+antioquia|olaya|5501
+antioquia|penol|5541
+antioquia|peque|5543
+antioquia|pueblorrico|5576
+antioquia|puerto berrio|5579
+antioquia|puerto nare|5585
+antioquia|puerto triunfo|5591
+antioquia|remedios|5604
+antioquia|retiro|5607
+antioquia|rionegro|5615
+antioquia|sabanalarga|5628
+antioquia|sabaneta|5631
+antioquia|salgar|5642
+antioquia|san andres|5647
+antioquia|san carlos|5649
+antioquia|san francisco|5652
+antioquia|san jeronimo|5656
+antioquia|san jose de la montana|5658
+antioquia|san juan de uraba|5659
+antioquia|san luis|5660
+antioquia|san pedro|5664
+antioquia|san pedro de uraba|5665
+antioquia|san rafael|5667
+antioquia|san roque|5670
+antioquia|san vicente|5674
+antioquia|santa barbara|5679
+antioquia|santa rosa de osos|5686
+antioquia|santo domingo|5690
+antioquia|el santuario|5697
+antioquia|segovia|5736
+antioquia|sonson|5756
+antioquia|sopetran|5761
+antioquia|tamesis|5789
+antioquia|taraza|5790
+antioquia|tarso|5792
+antioquia|titiribi|5809
+antioquia|toledo|5819
+antioquia|turbo|5837
+antioquia|uramita|5842
+antioquia|urrao|5847
+antioquia|valdivia|5854
+antioquia|valparaiso|5856
+antioquia|vegachi|5858
+antioquia|venecia|5861
+antioquia|vigia del fuerte|5873
+antioquia|yali|5885
+antioquia|yarumal|5887
+antioquia|yolombo|5890
+antioquia|yondo|5893
+antioquia|zaragoza|5895
+atlantico|barranquilla|8001
+atlantico|baranoa|8078
+atlantico|campo de la cruz|8137
+atlantico|candelaria|8141
+atlantico|galapa|8296
+atlantico|juan de acosta|8372
+atlantico|luruaco|8421
+atlantico|malambo|8433
+atlantico|manati|8436
+atlantico|palmar de varela|8520
+atlantico|piojo|8549
+atlantico|polonuevo|8558
+atlantico|ponedera|8560
+atlantico|puerto colombia|8573
+atlantico|repelon|8606
+atlantico|sabanagrande|8634
+atlantico|sabanalarga|8638
+atlantico|santa lucia|8675
+atlantico|santo tomas|8685
+atlantico|soledad|8758
+atlantico|suan|8770
+atlantico|tubara|8832
+atlantico|usiacuri|8849
+bogota d.c.|bogota d.c.|11001
+bolivar|cartagena|13001
+bolivar|achi|13006
+bolivar|altos del rosario|13030
+bolivar|arenal|13042
+bolivar|arjona|13052
+bolivar|arroyohondo|13062
+bolivar|barranco de loba|13074
+bolivar|calamar|13140
+bolivar|cantagallo|13160
+bolivar|cicuco|13188
+bolivar|cordoba|13212
+bolivar|clemencia|13222
+bolivar|el carmen de bolivar|13244
+bolivar|el guamo|13248
+bolivar|el penon|13268
+bolivar|hatillo de loba|13300
+bolivar|magangue|13430
+bolivar|mahates|13433
+bolivar|margarita|13440
+bolivar|maria la baja|13442
+bolivar|montecristo|13458
+bolivar|mompos|13468
+bolivar|morales|13473
+bolivar|norosi|13490
+bolivar|pinillos|13549
+bolivar|regidor|13580
+bolivar|rio viejo|13600
+bolivar|san cristobal|13620
+bolivar|san estanislao|13647
+bolivar|san fernando|13650
+bolivar|san jacinto|13654
+bolivar|san jacinto del cauca|13655
+bolivar|san juan nepomuceno|13657
+bolivar|san martin de loba|13667
+bolivar|san pablo|13670
+bolivar|santa catalina|13673
+bolivar|santa rosa|13683
+bolivar|santa rosa del sur|13688
+bolivar|simiti|13744
+bolivar|soplaviento|13760
+bolivar|talaigua nuevo|13780
+bolivar|tiquisio|13810
+bolivar|turbaco|13836
+bolivar|turbana|13838
+bolivar|villanueva|13873
+bolivar|zambrano|13894
+boyaca|tunja|15001
+boyaca|almeida|15022
+boyaca|aquitania|15047
+boyaca|arcabuco|15051
+boyaca|belen|15087
+boyaca|berbeo|15090
+boyaca|beteitiva|15092
+boyaca|boavita|15097
+boyaca|boyaca|15104
+boyaca|briceno|15106
+boyaca|buenavista|15109
+boyaca|busbanza|15114
+boyaca|caldas|15131
+boyaca|campohermoso|15135
+boyaca|cerinza|15162
+boyaca|chinavita|15172
+boyaca|chiquinquira|15176
+boyaca|chiscas|15180
+boyaca|chita|15183
+boyaca|chitaraque|15185
+boyaca|chivata|15187
+boyaca|cienega|15189
+boyaca|combita|15204
+boyaca|coper|15212
+boyaca|corrales|15215
+boyaca|covarachia|15218
+boyaca|cubara|15223
+boyaca|cucaita|15224
+boyaca|cuitiiva|15226
+boyaca|chiquiza|15232
+boyaca|chivor|15236
+boyaca|duitama|15238
+boyaca|el cocuy|15244
+boyaca|el espino|15248
+boyaca|firavitoba|15272
+boyaca|floresta|15276
+boyaca|gachantiva|15293
+boyaca|gameza|15296
+boyaca|garagoa|15299
+boyaca|guacamayas|15317
+boyaca|guateque|15322
+boyaca|guayata|15325
+boyaca|guican|15332
+boyaca|iza|15362
+boyaca|jenesano|15367
+boyaca|jerico|15368
+boyaca|labranzagrande|15377
+boyaca|la capilla|15380
+boyaca|la victoria|15401
+boyaca|la uvita|15403
+boyaca|villa de leyva|15407
+boyaca|macanal|15425
+boyaca|maripi|15442
+boyaca|miraflores|15455
+boyaca|mongua|15464
+boyaca|mongui|15466
+boyaca|moniquira|15469
+boyaca|motavita|15476
+boyaca|muzo|15480
+boyaca|nobsa|15491
+boyaca|nuevo colon|15494
+boyaca|oicata|15500
+boyaca|otanche|15507
+boyaca|pachavita|15511
+boyaca|paez|15514
+boyaca|paipa|15516
+boyaca|pajarito|15518
+boyaca|panqueba|15522
+boyaca|pauna|15531
+boyaca|paya|15533
+boyaca|paz de rio|15537
+boyaca|pesca|15542
+boyaca|pisba|15550
+boyaca|puerto boyaca|15572
+boyaca|quipama|15580
+boyaca|ramiriqui|15599
+boyaca|raquira|15600
+boyaca|rondon|15621
+boyaca|saboya|15632
+boyaca|sachica|15638
+boyaca|samaca|15646
+boyaca|san eduardo|15660
+boyaca|san jose de pare|15664
+boyaca|san luis de gaceno|15667
+boyaca|san mateo|15673
+boyaca|san miguel de sema|15676
+boyaca|san pablo borbur|15681
+boyaca|santana|15686
+boyaca|santa maria|15690
+boyaca|santa rosa de viterbo|15693
+boyaca|santa sofia|15696
+boyaca|sativanorte|15720
+boyaca|sativasur|15723
+boyaca|siachoque|15740
+boyaca|soata|15753
+boyaca|socota|15755
+boyaca|socha|15757
+boyaca|sogamoso|15759
+boyaca|somondoco|15761
+boyaca|sora|15762
+boyaca|sotaquira|15763
+boyaca|soraca|15764
+boyaca|susacon|15774
+boyaca|sutamarchan|15776
+boyaca|sutatenza|15778
+boyaca|tasco|15790
+boyaca|tenza|15798
+boyaca|tibana|15804
+boyaca|tibasosa|15806
+boyaca|tinjaca|15808
+boyaca|tipacoque|15810
+boyaca|toca|15814
+boyaca|togui|15816
+boyaca|topaga|15820
+boyaca|tota|15822
+boyaca|tunungua|15832
+boyaca|turmeque|15835
+boyaca|tuta|15837
+boyaca|tutasa|15839
+boyaca|umbita|15842
+boyaca|ventaquemada|15861
+boyaca|viracacha|15879
+boyaca|zetaquira|15897
+caldas|manizales|17001
+caldas|aguadas|17013
+caldas|anserma|17042
+caldas|aranzazu|17050
+caldas|belalcazar|17088
+caldas|chinchina|17174
+caldas|filadelfia|17272
+caldas|la dorada|17380
+caldas|la merced|17388
+caldas|manzanares|17433
+caldas|marmato|17442
+caldas|marquetalia|17444
+caldas|marulanda|17446
+caldas|neira|17486
+caldas|norcasia|17495
+caldas|pacora|17513
+caldas|palestina|17524
+caldas|pensilvania|17541
+caldas|riosucio|17614
+caldas|risaralda|17616
+caldas|salamina|17653
+caldas|samana|17662
+caldas|san jose|17665
+caldas|supia|17777
+caldas|victoria|17867
+caldas|villamaria|17873
+caldas|viterbo|17877
+caqueta|florencia|18001
+caqueta|albania|18029
+caqueta|belen de los andaquies|18094
+caqueta|cartagena del chaira|18150
+caqueta|currillo|18205
+caqueta|el doncello|18247
+caqueta|el paujil|18256
+caqueta|la montanita|18410
+caqueta|milan|18460
+caqueta|morelia|18479
+caqueta|puerto rico|18592
+caqueta|san jose de la fragua|18610
+caqueta|san vicente del caguan|18753
+caqueta|solano|18756
+caqueta|solita|18785
+caqueta|valparaiso|18860
+cauca|popayan|19001
+cauca|almaguer|19022
+cauca|argelia|19050
+cauca|balboa|19075
+cauca|bolivar|19100
+cauca|buenos aires|19110
+cauca|cajibio|19130
+cauca|caldono|19137
+cauca|caloto|19142
+cauca|corinto|19212
+cauca|el tambo|19256
+cauca|florencia|19290
+cauca|guachene|19300
+cauca|guapi|19318
+cauca|inza|19355
+cauca|jambalo|19364
+cauca|la sierra|19392
+cauca|la vega|19397
+cauca|lopez|19418
+cauca|mercaderes|19450
+cauca|miranda|19455
+cauca|morales|19473
+cauca|padilla|19513
+cauca|paez|19517
+cauca|patia|19532
+cauca|piamonte|19533
+cauca|piendamo|19548
+cauca|puerto tejada|19573
+cauca|purace|19585
+cauca|rosas|19622
+cauca|san sebastian|19693
+cauca|santander de quilichao|19698
+cauca|santa rosa|19701
+cauca|silvia|19743
+cauca|sotara|19760
+cauca|suarez|19780
+cauca|sucre|19785
+cauca|timbio|19807
+cauca|timbiqui|19809
+cauca|toribio|19821
+cauca|totoro|19824
+cauca|villa rica|19845
+cesar|valledupar|20001
+cesar|aguachica|20011
+cesar|agustin codazzi|20013
+cesar|astrea|20032
+cesar|becerril|20045
+cesar|bosconia|20060
+cesar|chimichagua|20175
+cesar|chiriguana|20178
+cesar|curumani|20228
+cesar|el copey|20238
+cesar|el paso|20250
+cesar|gamarra|20295
+cesar|gonzalez|20310
+cesar|la gloria|20383
+cesar|la jagua de ibirico|20400
+cesar|manaure|20443
+cesar|pailitas|20517
+cesar|pelaya|20550
+cesar|pueblo bello|20570
+cesar|rio de oro|20614
+cesar|la paz|20621
+cesar|san alberto|20710
+cesar|san diego|20750
+cesar|san martin|20770
+cesar|tamalameque|20787
+cordoba|monteria|23001
+cordoba|ayapel|23068
+cordoba|buenavista|23079
+cordoba|canalete|23090
+cordoba|cerete|23162
+cordoba|chima|23168
+cordoba|chinu|23182
+cordoba|cienaga de oro|23189
+cordoba|cotorra|23300
+cordoba|la apartada|23350
+cordoba|lorica|23417
+cordoba|los cordobas|23419
+cordoba|momil|23464
+cordoba|montelibano|23466
+cordoba|monitos|23500
+cordoba|planeta rica|23555
+cordoba|pueblo nuevo|23570
+cordoba|puerto escondido|23574
+cordoba|puerto libertador|23580
+cordoba|purisima|23586
+cordoba|sahagun|23660
+cordoba|san andres de sotavet0|23670
+cordoba|san antero|23672
+cordoba|san bernardo del viento|23675
+cordoba|san carlos|23678
+cordoba|san jose de ure|23682
+cordoba|san pelayo|23686
+cordoba|tierralta|23807
+cordoba|tuchin|23815
+cordoba|valencia|23855
+cordoba|zzzcerromatoso|23991
+cundinamarca|agua de dios|25001
+cundinamarca|alban|25019
+cundinamarca|anapoima|25035
+cundinamarca|anolaima|25040
+cundinamarca|arbelaez|25053
+cundinamarca|beltran|25086
+cundinamarca|bituima|25095
+cundinamarca|bojaca|25099
+cundinamarca|cabrera|25120
+cundinamarca|cachipay|25123
+cundinamarca|cajica|25126
+cundinamarca|caparrapi|25148
+cundinamarca|caqueza|25151
+cundinamarca|carmen de carupa|25154
+cundinamarca|chaguani|25168
+cundinamarca|chia|25175
+cundinamarca|chipaque|25178
+cundinamarca|choachi|25181
+cundinamarca|choconta|25183
+cundinamarca|cogua|25200
+cundinamarca|cota|25214
+cundinamarca|cucunuba|25224
+cundinamarca|el colegio|25245
+cundinamarca|el penon|25258
+cundinamarca|el rosal|25260
+cundinamarca|facatativa|25269
+cundinamarca|fomeque|25279
+cundinamarca|fosca|25281
+cundinamarca|funza|25286
+cundinamarca|fuquene|25288
+cundinamarca|fusagasuga|25290
+cundinamarca|gachala|25293
+cundinamarca|gachancipa|25295
+cundinamarca|gacheta|25297
+cundinamarca|gama|25299
+cundinamarca|girardot|25307
+cundinamarca|granada|25312
+cundinamarca|guacheta|25317
+cundinamarca|guaduas|25320
+cundinamarca|guasca|25322
+cundinamarca|guataqui|25324
+cundinamarca|guatavita|25326
+cundinamarca|guayabal de siquima|25328
+cundinamarca|guayabetal|25335
+cundinamarca|gutierrez|25339
+cundinamarca|jerusalen|25368
+cundinamarca|junin|25372
+cundinamarca|la calera|25377
+cundinamarca|la mesa|25386
+cundinamarca|la palma|25394
+cundinamarca|la pena|25398
+cundinamarca|la vega|25402
+cundinamarca|lenguazaque|25407
+cundinamarca|macheta|25426
+cundinamarca|madrid|25430
+cundinamarca|manta|25436
+cundinamarca|medina|25438
+cundinamarca|mosquera|25473
+cundinamarca|narino|25483
+cundinamarca|nemocon|25486
+cundinamarca|nilo|25488
+cundinamarca|nimaima|25489
+cundinamarca|nocaima|25491
+cundinamarca|venecia|25506
+cundinamarca|pacho|25513
+cundinamarca|paime|25518
+cundinamarca|pandi|25524
+cundinamarca|paratebueno|25530
+cundinamarca|pasca|25535
+cundinamarca|puerto salgar|25572
+cundinamarca|puli|25580
+cundinamarca|quebradanegra|25592
+cundinamarca|quetame|25594
+cundinamarca|quipile|25596
+cundinamarca|apulo|25599
+cundinamarca|ricaurte|25612
+cundinamarca|san antonio de tequendama|25645
+cundinamarca|san bernardo|25649
+cundinamarca|san cayetano|25653
+cundinamarca|san francisco|25658
+cundinamarca|san juan de rioseco|25662
+cundinamarca|sasaima|25718
+cundinamarca|sesquile|25736
+cundinamarca|sibate|25740
+cundinamarca|silvania|25743
+cundinamarca|simijaca|25745
+cundinamarca|soacha|25754
+cundinamarca|sopo|25758
+cundinamarca|subachoque|25769
+cundinamarca|suesca|25772
+cundinamarca|supata|25777
+cundinamarca|susa|25779
+cundinamarca|sutatausa|25781
+cundinamarca|tabio|25785
+cundinamarca|tausa|25793
+cundinamarca|tena|25797
+cundinamarca|tenjo|25799
+cundinamarca|tibacuy|25805
+cundinamarca|tibirita|25807
+cundinamarca|tocaima|25815
+cundinamarca|tocancipa|25817
+cundinamarca|topaipi|25823
+cundinamarca|ubala|25839
+cundinamarca|ubaque|25841
+cundinamarca|ubate|25843
+cundinamarca|une|25845
+cundinamarca|utica|25851
+cundinamarca|vergara|25862
+cundinamarca|viani|25867
+cundinamarca|villagomez|25871
+cundinamarca|villapinzon|25873
+cundinamarca|villeta|25875
+cundinamarca|viota|25878
+cundinamarca|yacopi|25885
+cundinamarca|zipacon|25898
+cundinamarca|zipaquira|25899
+choco|quibdo|27001
+choco|acandi|27006
+choco|alto baudo|27025
+choco|atrato|27050
+choco|bagado|27073
+choco|bahia solano|27075
+choco|bajo baudo|27077
+choco|zzzbelen de bajira|27086
+choco|bojaya|27099
+choco|canton del san pablo|27135
+choco|carmen del darien|27150
+choco|certegui|27160
+choco|condoto|27205
+choco|el carmen de atrato|27245
+choco|litoral del bajo san juan|27250
+choco|istmina|27361
+choco|jurado|27372
+choco|lloro|27413
+choco|medio atrato|27425
+choco|medio baudo|27430
+choco|medio san juan|27450
+choco|novita|27491
+choco|nuqui|27495
+choco|rio iro|27580
+choco|rio quito|27600
+choco|riosucio|27615
+choco|san jose del palmar|27660
+choco|sipi|27745
+choco|tado|27787
+choco|unguia|27800
+choco|union panamericana|27810
+huila|neiva|41001
+huila|acevedo|41006
+huila|agrado|41013
+huila|aipe|41016
+huila|algeciras|41020
+huila|altamira|41026
+huila|baraya|41078
+huila|campoalegre|41132
+huila|colombia|41206
+huila|elias|41244
+huila|garzon|41298
+huila|gigante|41306
+huila|guadalupe|41319
+huila|hobo|41349
+huila|iquira|41357
+huila|isnos|41359
+huila|la argentina|41378
+huila|la plata|41396
+huila|nataga|41483
+huila|oporapa|41503
+huila|paicol|41518
+huila|palermo|41524
+huila|palestina|41530
+huila|pital|41548
+huila|pitalito|41551
+huila|rivera|41615
+huila|saladoblanco|41660
+huila|san agustin|41668
+huila|santa maria|41676
+huila|suaza|41770
+huila|tarqui|41791
+huila|tesalia|41797
+huila|tello|41799
+huila|teruel|41801
+huila|timana|41807
+huila|villavieja|41872
+huila|yaguara|41885
+la guajira|riohacha|44001
+la guajira|albania|44035
+la guajira|barrancas|44078
+la guajira|dibulla|44090
+la guajira|distraccion|44098
+la guajira|el molino|44110
+la guajira|fonseca|44279
+la guajira|hatonuevo|44378
+la guajira|la jagua del pilar|44420
+la guajira|maicao|44430
+la guajira|manaure|44560
+la guajira|san juan del cesar|44650
+la guajira|uribia|44847
+la guajira|urumita|44855
+la guajira|villanueva|44874
+magdalena|santa marta|47001
+magdalena|algarrobo|47030
+magdalena|aracataca|47053
+magdalena|ariguani|47058
+magdalena|cerro san antonio|47161
+magdalena|chivolo|47170
+magdalena|cienaga|47189
+magdalena|concordia|47205
+magdalena|el banco|47245
+magdalena|el pinon|47258
+magdalena|el reten|47268
+magdalena|fundacion|47288
+magdalena|guamal|47318
+magdalena|nueva granada|47460
+magdalena|pedraza|47541
+magdalena|pijino del carmen|47545
+magdalena|pivijay|47551
+magdalena|plato|47555
+magdalena|puebloviejo|47570
+magdalena|remolino|47605
+magdalena|sabanas de san angel|47660
+magdalena|salamina|47675
+magdalena|san sebastian de buenavista|47692
+magdalena|san zenon|47703
+magdalena|santa ana|47707
+magdalena|santa barbara de pinto|47720
+magdalena|sitionuevo|47745
+magdalena|tenerife|47798
+magdalena|zapayan|47960
+magdalena|zona bananera|47980
+meta|villavicencio|50001
+meta|acacias|50006
+meta|barranca de upia|50110
+meta|cabuyaro|50124
+meta|castilla la nueva|50150
+meta|cubarral|50223
+meta|cumaral|50226
+meta|el calvario|50245
+meta|el castillo|50251
+meta|el dorado|50270
+meta|fuente de oro|50287
+meta|granada|50313
+meta|guamal|50318
+meta|mapiripan|50325
+meta|mesetas|50330
+meta|la macarena|50350
+meta|uribe|50370
+meta|lejanias|50400
+meta|puerto concordia|50450
+meta|puerto gaitan|50568
+meta|puerto lopez|50573
+meta|puerto lleras|50577
+meta|puerto rico|50590
+meta|restrepo|50606
+meta|san carlos de guaroa|50680
+meta|san juan de arama|50683
+meta|san juanito|50686
+meta|san martin|50689
+meta|vista hermosa|50711
+narino|pasto|52001
+narino|alban|52019
+narino|aldana|52022
+narino|ancuya|52036
+narino|arboleda|52051
+narino|barbacoas|52079
+narino|belen|52083
+narino|buesaco|52110
+narino|colon|52203
+narino|consaca|52207
+narino|contadero|52210
+narino|cordoba|52215
+narino|cuaspud|52224
+narino|cumbal|52227
+narino|cumbitara|52233
+narino|chachagui|52240
+narino|el charco|52250
+narino|el penol|52254
+narino|el rosario|52256
+narino|el tablon|52258
+narino|el tambo|52260
+narino|funes|52287
+narino|guachucal|52317
+narino|guaitarilla|52320
+narino|gualmatan|52323
+narino|iles|52352
+narino|imues|52354
+narino|ipiales|52356
+narino|la cruz|52378
+narino|la florida|52381
+narino|la llanada|52385
+narino|la tola|52390
+narino|la union|52399
+narino|leiva|52405
+narino|linares|52411
+narino|los andes|52418
+narino|magui|52427
+narino|mallama|52435
+narino|mosquera|52473
+narino|narino|52480
+narino|olaya herrera|52490
+narino|ospina|52506
+narino|francisco pizarro|52520
+narino|policarpa|52540
+narino|potosi|52560
+narino|providencia|52565
+narino|puerres|52573
+narino|pupiales|52585
+narino|ricaurte|52612
+narino|roberto payan|52621
+narino|samaniego|52678
+narino|sandona|52683
+narino|san bernardo|52685
+narino|san lorenzo|52687
+narino|san pablo|52693
+narino|san pedro de cartago|52694
+narino|santa barbara|52696
+narino|santa cruz|52699
+narino|sapuyes|52720
+narino|taminango|52786
+narino|tangua|52788
+narino|tumaco|52835
+narino|tuquerres|52838
+narino|yacuanquer|52885
+norte de santander|cucuta|54001
+norte de santander|abrego|54003
+norte de santander|arboledas|54051
+norte de santander|bochalema|54099
+norte de santander|bucarasica|54109
+norte de santander|cacota|54125
+norte de santander|cachira|54128
+norte de santander|chinacota|54172
+norte de santander|chitaga|54174
+norte de santander|convencion|54206
+norte de santander|cucutilla|54223
+norte de santander|durania|54239
+norte de santander|el carmen|54245
+norte de santander|el tarra|54250
+norte de santander|el zulia|54261
+norte de santander|gramalote|54313
+norte de santander|hacari|54344
+norte de santander|herran|54347
+norte de santander|labateca|54377
+norte de santander|la esperanza|54385
+norte de santander|la playa|54398
+norte de santander|los patios|54405
+norte de santander|lourdes|54418
+norte de santander|mutiscua|54480
+norte de santander|ocana|54498
+norte de santander|pamplona|54518
+norte de santander|pamplonita|54520
+norte de santander|puerto santander|54553
+norte de santander|ragonvalia|54599
+norte de santander|salazar|54660
+norte de santander|san calixto|54670
+norte de santander|san cayetano|54673
+norte de santander|santiago|54680
+norte de santander|sardinata|54720
+norte de santander|silos|54743
+norte de santander|teorama|54800
+norte de santander|tibu|54810
+norte de santander|toledo|54820
+norte de santander|villa caro|54871
+norte de santander|villa del rosario|54874
+quindio|armenia|63001
+quindio|buenavista|63111
+quindio|calarca|63130
+quindio|circasia|63190
+quindio|cordoba|63212
+quindio|filandia|63272
+quindio|genova|63302
+quindio|la tebaida|63401
+quindio|montenegro|63470
+quindio|pijao|63548
+quindio|quimbaya|63594
+quindio|salento|63690
+risaralda|pereira|66001
+risaralda|apia|66045
+risaralda|balboa|66075
+risaralda|belen de umbria|66088
+risaralda|dos quebradas|66170
+risaralda|guatica|66318
+risaralda|la celia|66383
+risaralda|la virginia|66400
+risaralda|marsella|66440
+risaralda|mistrato|66456
+risaralda|pueblo rico|66572
+risaralda|quinchia|66594
+risaralda|santa rosa de cabal|66682
+risaralda|santuario|66687
+santander|bucaramanga|68001
+santander|aguada|68013
+santander|albania|68020
+santander|aratoca|68051
+santander|barbosa|68077
+santander|barichara|68079
+santander|barrancabermeja|68081
+santander|betulia|68092
+santander|bolivar|68101
+santander|cabrera|68121
+santander|california|68132
+santander|capitanejo|68147
+santander|carcasi|68152
+santander|cepita|68160
+santander|cerrito|68162
+santander|charala|68167
+santander|charta|68169
+santander|chima|68176
+santander|chipata|68179
+santander|cimitarra|68190
+santander|concepcion|68207
+santander|confines|68209
+santander|contratacion|68211
+santander|coromoro|68217
+santander|curiti|68229
+santander|el carmen de chucuri|68235
+santander|el guacamayo|68245
+santander|el penon|68250
+santander|el playon|68255
+santander|encino|68264
+santander|enciso|68266
+santander|el florian|68271
+santander|floridablanca|68276
+santander|galan|68296
+santander|gambita|68298
+santander|giron|68307
+santander|guaca|68318
+santander|guadalupe|68320
+santander|guapota|68322
+santander|guavata|68324
+santander|guepsa|68327
+santander|hato|68344
+santander|jesus maria|68368
+santander|jordan|68370
+santander|la belleza|68377
+santander|landazuri|68385
+santander|la paz|68397
+santander|lebrija|68406
+santander|los santos|68418
+santander|macaravita|68425
+santander|malaga|68432
+santander|matanza|68444
+santander|mogotes|68464
+santander|molagavita|68468
+santander|ocamonte|68498
+santander|oiba|68500
+santander|onzaga|68502
+santander|palmar|68522
+santander|palmas del socorro|68524
+santander|paramo|68533
+santander|piedecuesta|68547
+santander|pinchote|68549
+santander|puente nacional|68572
+santander|puerto parra|68573
+santander|puerto wilches|68575
+santander|rionegro|68615
+santander|sabana de torres|68655
+santander|san andres|68669
+santander|san benito|68673
+santander|san gil|68679
+santander|san joaquin|68682
+santander|san jose de miranda|68684
+santander|san miguel|68686
+santander|san vicente de chucuri|68689
+santander|santa barbara|68705
+santander|santa helena del opon|68720
+santander|simacota|68745
+santander|socorro|68755
+santander|suaita|68770
+santander|sucre|68773
+santander|surata|68780
+santander|tona|68820
+santander|valle de san jose|68855
+santander|velez|68861
+santander|vetas|68867
+santander|villanueva|68872
+santander|zapatoca|68895
+sucre|sincelejo|70001
+sucre|buenavista|70110
+sucre|caimito|70124
+sucre|coloso|70204
+sucre|corozal|70215
+sucre|covenas|70221
+sucre|chalan|70230
+sucre|el roble|70233
+sucre|galeras|70235
+sucre|guaranda|70265
+sucre|la union|70400
+sucre|los palmitos|70418
+sucre|majagual|70429
+sucre|morroa|70473
+sucre|ovejas|70508
+sucre|palmito|70523
+sucre|sampues|70670
+sucre|san benito abad|70678
+sucre|san juan betulia|70702
+sucre|san marcos|70708
+sucre|san onofre|70713
+sucre|san pedro|70717
+sucre|since|70742
+sucre|sucre|70771
+sucre|tolu|70820
+sucre|toluviejo|70823
+tolima|ibague|73001
+tolima|alpujarra|73024
+tolima|alvarado|73026
+tolima|ambalema|73030
+tolima|anzoategui|73043
+tolima|armero|73055
+tolima|ataco|73067
+tolima|cajamarca|73124
+tolima|carmen apicala|73148
+tolima|casabianca|73152
+tolima|chaparral|73168
+tolima|coello|73200
+tolima|coyaima|73217
+tolima|cunday|73226
+tolima|dolores|73236
+tolima|espinal|73268
+tolima|falan|73270
+tolima|flandes|73275
+tolima|fresno|73283
+tolima|guamo|73319
+tolima|herveo|73347
+tolima|honda|73349
+tolima|icononzo|73352
+tolima|lerida|73408
+tolima|libano|73411
+tolima|mariquita|73443
+tolima|melgar|73449
+tolima|murillo|73461
+tolima|natagaima|73483
+tolima|ortega|73504
+tolima|palo cabildo|73520
+tolima|piedras|73547
+tolima|planadas|73555
+tolima|prado|73563
+tolima|purificacion|73585
+tolima|rioblanco|73616
+tolima|roncesvalles|73622
+tolima|rovira|73624
+tolima|saldana|73671
+tolima|san antonio|73675
+tolima|san luis|73678
+tolima|santa isabel|73686
+tolima|suarez|73770
+tolima|valle de san juan|73854
+tolima|venadillo|73861
+tolima|villahermosa|73870
+tolima|villarrica|73873
+valle del cauca|cali|76001
+valle del cauca|alcala|76020
+valle del cauca|andalucia|76036
+valle del cauca|ansermanuevo|76041
+valle del cauca|argelia|76054
+valle del cauca|bolivar|76100
+valle del cauca|buenaventura|76109
+valle del cauca|buga|76111
+valle del cauca|bugalagrande|76113
+valle del cauca|caicedonia|76122
+valle del cauca|calima|76126
+valle del cauca|candelaria|76130
+valle del cauca|cartago|76147
+valle del cauca|dagua|76233
+valle del cauca|el aguila|76243
+valle del cauca|el cairo|76246
+valle del cauca|el cerrito|76248
+valle del cauca|el dovio|76250
+valle del cauca|florida|76275
+valle del cauca|ginebra|76306
+valle del cauca|guacari|76318
+valle del cauca|jamundi|76364
+valle del cauca|la cumbre|76377
+valle del cauca|la union|76400
+valle del cauca|la victoria|76403
+valle del cauca|obando|76497
+valle del cauca|palmira|76520
+valle del cauca|pradera|76563
+valle del cauca|restrepo|76606
+valle del cauca|riofrio|76616
+valle del cauca|roldanillo|76622
+valle del cauca|san pedro|76670
+valle del cauca|sevilla|76736
+valle del cauca|toro|76823
+valle del cauca|trujillo|76828
+valle del cauca|tulua|76834
+valle del cauca|ulloa|76845
+valle del cauca|versalles|76863
+valle del cauca|vijes|76869
+valle del cauca|yotoco|76890
+valle del cauca|yumbo|76892
+valle del cauca|zarzal|76895
+arauca|arauca|81001
+arauca|arauquita|81065
+arauca|cravo norte|81220
+arauca|fortul|81300
+arauca|puerto rondon|81591
+arauca|saravena|81736
+arauca|tame|81794
+casanare|yopal|85001
+casanare|aguazul|85010
+casanare|chameza|85015
+casanare|hato corozal|85125
+casanare|la salina|85136
+casanare|mani|85139
+casanare|monterrey|85162
+casanare|nunchia|85225
+casanare|orocue|85230
+casanare|paz de ariporo|85250
+casanare|pore|85263
+casanare|recetor|85279
+casanare|sabanalarga|85300
+casanare|sacama|85315
+casanare|san luis de palenque|85325
+casanare|tamara|85400
+casanare|tauramena|85410
+casanare|trinidad|85430
+casanare|villanueva|85440
+putumayo|mocoa|86001
+putumayo|colon|86219
+putumayo|orito|86320
+putumayo|puerto asis|86568
+putumayo|puerto caicedo|86569
+putumayo|puerto guzman|86571
+putumayo|puerto leguizamo|86573
+putumayo|sibundoy|86749
+putumayo|san francisco|86755
+putumayo|san miguel|86757
+putumayo|santiago|86760
+putumayo|valle del guamuez|86865
+putumayo|villagarzon|86885
+san andres|san andres|88001
+san andres|providencia|88564
+amazonas|leticia|91001
+amazonas|el encanto|91263
+amazonas|la chorrera|91405
+amazonas|la pedrera|91407
+amazonas|la victoria|91430
+amazonas|miriti-parana|91460
+amazonas|puerto alegria|91530
+amazonas|puerto arica|91536
+amazonas|puerto narino|91540
+amazonas|puerto santander|91669
+amazonas|tarapaca|91798
+guania|inirida|94001
+guania|barranco minas|94343
+guania|mapiripana|94663
+guania|san felipe|94883
+guania|puerto colombia|94884
+guania|la guadalupe|94885
+guania|cacahual|94886
+guania|pana pana|94887
+guania|morichal nuevo|94888
+guaviare|san jose del guaviare|95001
+guaviare|calamar|95015
+guaviare|el retorno|95025
+guaviare|miraflores|95200
+vaupes|mitu|97001
+vaupes|caruru|97161
+vaupes|pacoa|97511
+vaupes|taraira|97666
+vaupes|papunahua|97777
+vaupes|yavarate|97889
+vichada|puerto carreno|99001
+vichada|la primavera|99524
+vichada|santa rosalia|99624
+vichada|cumaribo|99773
