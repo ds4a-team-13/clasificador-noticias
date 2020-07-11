@@ -50,3 +50,11 @@ def crear_listado_noticias(df, categoria, semana, anho):
         listado = [{'label':'No hay noticias', 'value':-1}]
 
     return listado
+
+def get_geojson():
+    path = os.path.dirname(os.path.abspath(__file__))
+    return pd.read_json(path + '/../../data/web/departamentos.json')
+
+def get_geojson_path():
+    path = os.path.dirname(os.path.abspath(__file__))
+    return path + '/../../data/web/departamentos.json'
