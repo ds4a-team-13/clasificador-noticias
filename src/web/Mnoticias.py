@@ -7,6 +7,20 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 import os
 
+def inicializar_analisis_temporal():
+    # Método que inicializa los dataframes, figuras, y opciones
+    df_conteo = pd.read_csv('../../data/web/conteo_noticias.csv', nrows=100)
+    df1 = pd.read_csv('../../data/web/news_categorized.csv', nrows=100)
+    fig = px.line(df_conteo, x = "date_year_week", y="num_hechos",
+        title='', color = 'cluster')
+    fig.layout.plot_bgcolor = '#000000'
+    fig.layout.paper_bgcolor = '#000000'
+    lista_news_categoria_0 = []
+    lista_anhos = df_conteo.year.unique()
+    lista_semanas = range(1, 10)
+
+    return df_conteo, df1, fig, lista_news_categoria_0, lista_anhos, lista_semanas
+
 
 def read_news():
     path = os.path.dirname(os.path.abspath(__file__))
@@ -18,10 +32,21 @@ def read_news():
 
     return df
 
-def crear_listado_noticias(df, listado):
+def crear_listado_noticias(df, categoria, semana, anho):
 
-    for i in range(df.shape[0]):
-        # listado.append(dbc.ListGroupItem(df['titulo'].loc[i]))
-        listado.append({'label':df['titulo'].loc[i], 'value':i})
+    df1 = df[df['cluster']==categoria].copy()
+    df1 = df1[df1['year']==anho]
+    df1 = df1[df1['week']==semana]
+
+    if df1.shape[0] > 0:
+        listado = []
+        for i in range(df1.shape[0]):
+            titulo = df1['titulo'].iloc[i]
+            titulo = titulo[:20] + '...'
+            id_noticia = df1['ID'].iloc[i]
+            listado.append({'label':titulo, 'value':id_noticia})
+    else:
+        # listado = [{'label':'No se encontraron noticias', 'value':1}]
+        listado = [{'label':'No hay noticias', 'value':-1}]
 
     return listado
