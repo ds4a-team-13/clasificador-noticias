@@ -24,5 +24,5 @@ class DiarioDelHuilaSpider(SimpleSpider):
   
     def parse_list_date(self, dates):
       date = dates[-1]
-      return datetime.datetime.strptime(date, '%Y-%m-%d')
+      return datetime.datetime.strptime(date.strip(), '%Y-%m-%d')
 
