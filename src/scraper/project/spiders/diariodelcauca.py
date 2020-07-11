@@ -14,7 +14,7 @@ class DiarioDelCaucaSpider(SimpleSpider):
     datesPath = '//div[starts-with(@class, "node node-article node-reviewed")]//div[@class = "content"]//div[@class="field field-datetime"]//div[@class = "field-item"]/text()' 
 
     tituloPath  = '//div[@id="block-system-main"]/div/div/div/div[@class="field field-title"]//h2/a/text()'
-    cuerpoPath  = '//div[@class = "t-content"]//p//text()'
+    cuerpoPath  = '//div[@class = "t-content"]//p//text() | //div[@class = "t-content"]//div[@class="rtejustify"]//text() | //div[@class="t-content"]/div/div/div/div/div/div/div/div/div/text()'
     cuerpoPath2 = '//div[@class = "t-content"]//div[@class="rtejustify"]//text()'
     cuerpoPath3 = '//div[@class="t-content"]/div/div/div/div/div/div/div/div/div/text()'
     fechaPath   = '//div[@class = "field field-title"]/following-sibling::div[@class="field field-datetime"]//div[@class = "field-item"]/text()'
@@ -54,7 +54,7 @@ class DiarioDelCaucaSpider(SimpleSpider):
       :params fecha: string date scraped from datesPath in format: DD/MM/YYYY - HH:MM
       :return year: int year of the publication news
       """
-      print(dates)
+      #print(dates)
       last_date = dates[-1]
       last_date = last_date.split('-')[0].strip()
       

@@ -15,7 +15,6 @@ class LaNacionSpider(SimpleSpider):
     nextPagePath = '//nav//div/a[@class="next page-numbers"]'
 
     tituloPath = '//header//h1/text()'
-    #cuerpoPath = '//article//div/p[@style="text-align: justify;"]//text()'
     cuerpoPath = '//article//div/p//text()'
     fechaPath   = '//article//time/@datetime'
 
