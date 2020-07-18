@@ -1,11 +1,14 @@
-import pandas as pd
-pd.options.display.max_columns = None
-import sqlite3
-from datetime import datetime          # Handling of dates
-from base64 import b64encode           # Build id per news
-from nltk.corpus import stopwords      # stopwords from nltk
-from stop_words import get_stop_words  # stopwords from scipy
-from nltk import SnowballStemmer       # Stemming (word root)
-from unidecode import unidecode        # Removal of accents
-import es_core_news_sm                 # Tagger model in spanish
-import pickle
+pandas
+sqlite3
+datetime          # Handling of dates
+base64            # Build id per news
+nltk
+#nltk.download('stopwords')
+scipy
+stop-words		  # stopwords from scipy
+unidecode	      # Removal of accents
+#python -m spacy download es_core_news_sm # Tagger model in spanish
+pickle
+numpy
+gensim
+sklearn
