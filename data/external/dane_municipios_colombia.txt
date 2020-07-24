@@ -1,5 +1,4 @@
 departamento|municipio|codigo_municipio
-otro|no residente en el pais|99
 antioquia|medellin|5001
 antioquia|abejorral|5002
 antioquia|abriaqui|5004
@@ -148,7 +147,7 @@ atlantico|soledad|8758
 atlantico|suan|8770
 atlantico|tubara|8832
 atlantico|usiacuri|8849
-bogota d.c.|bogota d.c.|11001
+bogota|bogota|11001
 bolivar|cartagena|13001
 bolivar|achi|13006
 bolivar|altos del rosario|13030
@@ -643,21 +642,21 @@ huila|teruel|41801
 huila|timana|41807
 huila|villavieja|41872
 huila|yaguara|41885
-la guajira|riohacha|44001
-la guajira|albania|44035
-la guajira|barrancas|44078
-la guajira|dibulla|44090
-la guajira|distraccion|44098
-la guajira|el molino|44110
-la guajira|fonseca|44279
-la guajira|hatonuevo|44378
-la guajira|la jagua del pilar|44420
-la guajira|maicao|44430
-la guajira|manaure|44560
-la guajira|san juan del cesar|44650
-la guajira|uribia|44847
-la guajira|urumita|44855
-la guajira|villanueva|44874
+guajira|riohacha|44001
+guajira|albania|44035
+guajira|barrancas|44078
+guajira|dibulla|44090
+guajira|distraccion|44098
+guajira|el molino|44110
+guajira|fonseca|44279
+guajira|hatonuevo|44378
+guajira|la jagua del pilar|44420
+guajira|maicao|44430
+guajira|manaure|44560
+guajira|san juan del cesar|44650
+guajira|uribia|44847
+guajira|urumita|44855
+guajira|villanueva|44874
 magdalena|santa marta|47001
 magdalena|algarrobo|47030
 magdalena|aracataca|47053

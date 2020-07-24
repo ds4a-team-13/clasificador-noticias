@@ -7,6 +7,7 @@ from unidecode import unidecode        # Removal of accents
 # function for clean text
 def clean_text(serie_word: pd.Series, 
 			   stop_words: list,
+			   remove_accents: bool,
 			   make_stemming: bool) -> pd.Series:
 	"""
 	This function clean the text: transform to lowercase, removing punctuation,
@@ -16,6 +17,7 @@ def clean_text(serie_word: pd.Series,
 	@input: 
 		-serie_word: serie contains text per news
 		-stop_words: list contains stopwords to remove.
+		-remove_accents: True if you want to remove accents, False otherwise.
 		-make_stemming: True if you want to make stemming, False otherwise.
 	@return: serie contains clean text per news
 	"""
@@ -27,9 +29,10 @@ def clean_text(serie_word: pd.Series,
 	#Removing Punctuation
 	serie_word = serie_word.str.replace('[^\w\s]','')
 	
-	print('Removing accents...')
-	#Removal accents
-	serie_word = serie_word.apply(lambda x: " ".join(unidecode(word) for word in x.split()))
+	if remove_accents:
+		print('Removing accents...')
+		#Removal accents
+		serie_word = serie_word.apply(lambda x: " ".join(unidecode(word) for word in x.split()))
 		
 	print('Removing numbers...')
 	#Numbers removing
@@ -67,7 +70,9 @@ def master_clean_text(df: pd.DataFrame) -> pd.DataFrame:
 	
 	swords_from_packages = stopwords_scipy + stopwords_nltk
 	#Removal of accents in stopwords and lower case
-	swords_from_packages = [unidecode(word).lower() for word in swords_from_packages]
+	#swords_from_packages = [unidecode(word).lower() for word in swords_from_packages]
+	swords_from_packages = [word.lower() for word in swords_from_packages]
+	
 	# removal stopwords duplicated
 	swords_from_packages = list(set(swords_from_packages))
 	print('size words from packages to remove', len(swords_from_packages))
@@ -76,7 +81,8 @@ def master_clean_text(df: pd.DataFrame) -> pd.DataFrame:
 	df_names = pd.read_csv('data/external/stopwords_names.txt')
 	swords_file = list(df_names['name'])
 	#Removal of accents in stopwords and lower case
-	swords_file = [unidecode(word).lower() for word in swords_file]
+	#swords_file = [unidecode(word).lower() for word in swords_file]
+	swords_file = [word.lower() for word in swords_file]
 	
 	# consolidate all stopwords
 	swords_all = swords_from_packages + swords_file
@@ -84,18 +90,31 @@ def master_clean_text(df: pd.DataFrame) -> pd.DataFrame:
 	print('total words dictionary to remove', len(swords_all))
 	
 	# Stemming (word root)
-	spanishstemmer = SnowballStemmer('spanish')
+	#spanishstemmer = SnowballStemmer('spanish')
 	
 	# Applying clean_text function
 	df['text'] = df['titulo'] + ' ' + df['cuerpo']
 	
-	df['pre_clean_text'] = clean_text(serie_word    = df['text'],
-									  stop_words    = swords_from_packages,
-									  make_stemming = False)
+#	df['pre_clean_text'] = clean_text(serie_word    = df['text'],
+#									  stop_words    = swords_from_packages,
+#									  remove_accents =  True,
+#									  make_stemming  = False)
+#	
+#	df['clean_text'] = clean_text(serie_word    = df['text'],
+#								  stop_words    = swords_all,
+#								  remove_accents = True,
+#								  make_stemming  = True)
 	
-	df['clean_text'] = clean_text(serie_word    = df['text'],
+	munis_tildes = pd.read_csv('data/external/dane_municipios_colombia_tildes.txt', sep = '|')
+	swords_geo = list(set(list(munis_tildes['departamento']) + list(munis_tildes['municipio'])))
+	swords_all = swords_all + swords_geo
+	
+	df['text_for_embedding'] = clean_text(serie_word    = df['text'],
 								  stop_words    = swords_all,
-								  make_stemming = True)
+								  remove_accents = False,
+								  make_stemming  = False)
+	
+	df.drop(columns = ['text'], inplace = True)
 	
 	print('process clean_text finished')
 	

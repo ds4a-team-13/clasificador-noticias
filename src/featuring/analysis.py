@@ -190,6 +190,48 @@ df = pd.read_csv('data/featuring/data_featuring.txt', sep = '|')
 
 df.head()
 
+region = 'departamento'
+df[region+'s'].fillna('', inplace = True)
+
+#norte de santander
+#valle del cauca
+
+x = df[df[region + 's'].str.contains('cauca')]['pre_clean_text'].iloc[5]
+x
+
+#before_word = 'valle'
+#word = 'cauca'
+before_word = 'norte'
+word = 'santander'
+
+
+split_x = x.split()
+split_x = pd.Series(split_x)
+ubication_x = split_x[split_x.isin(df_dane[region])]
+
+# validacion valle del cauca o norte de santander
+idx_reg = ubication_x[ubication_x.isin([word])].index
+idx_reg = list(idx_reg)
+
+
+if len(idx_reg) > 0:
+	id_x_1 = np.array(idx_reg) - 1
+	split_x_1 = split_x[id_x_1]
+	split_x_1_found = split_x_1[split_x_1.isin([before_word])]
+	
+	if len(split_x_1_found) > 0:
+		ubication_x[split_x_1_found.index + 1] = before_word + ' ' + word
+
+ubication_x
+ubication_x = '|'.join(set(ubication_x))
+ubication_x
+
+#aux = df_dane[region].drop_duplicates()
+#aux[aux.str.split().apply(len) > 1]
+
+# =============================================================================
+# 
+# =============================================================================
 df.set_index(['id'], inplace = True)
 x = df['pre_clean_text'].iloc[:3]
 
