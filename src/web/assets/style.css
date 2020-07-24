@@ -21,3 +21,11 @@
 #noticia_c0 {
     color: black;
 }
+
+#clase_value .VirtualizedSelectFocusedOption {
+  background-color: #375a80;
+  color: white;
+}
+#clase_value {
+    color: black;
+}
