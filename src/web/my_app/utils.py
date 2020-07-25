@@ -7,6 +7,12 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 import os
 
+import nltk
+from sklearn.feature_extraction.text import CountVectorizer
+from nltk.corpus import stopwords
+
+path = os.path.dirname(os.path.abspath(__file__))
+
 def inicializar_analisis_temporal():
     # Método que inicializa los dataframes, figuras, y opciones
     df_conteo = pd.read_csv('../../data/web/conteo_noticias.csv', nrows=100)
@@ -58,3 +64,24 @@ def get_geojson():
 def get_geojson_path():
     path = os.path.dirname(os.path.abspath(__file__))
     return path + '/../../data/web/departamentos.json'
+
+
+def db_get_df(query):
+    global path
+    db_path = path + '/../../../data/data_featuring.db'
+    
+    cnx = sqlite3.connect(db_path)
+    return pd.read_sql_query(query, cnx)
+
+# Following code grabbed from:
+# https://towardsdatascience.com/a-complete-exploratory-data-analysis-and-visualization-for-text-data-29fb1b96fb6a
+# we will use it in our context to create some visualizations.
+def get_top_n_words(corpus, n=1,k=1):
+    swords = stopwords.words('spanish')
+
+    vec = CountVectorizer(ngram_range=(k,k),stop_words=swords).fit(corpus)
+    bag_of_words = vec.transform(corpus)
+    sum_words = bag_of_words.sum(axis=0) 
+    words_freq = [(word, sum_words[0, idx]) for word, idx in vec.vocabulary_.items()]
+    words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
+    return words_freq[:n]
