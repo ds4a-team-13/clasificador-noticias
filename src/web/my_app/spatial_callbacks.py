@@ -8,9 +8,13 @@ import plotly.express as px
 from datetime import datetime as dt
 from unidecode import unidecode
 from datetime import timedelta
+from wordcloud import WordCloud
 import geopandas as gpd
+from io import BytesIO
 import pandas as pd
 import random, json
+import base64
+import dash
 
 import my_app.utils as utils
 
@@ -37,16 +41,26 @@ def register_callbacks(app):
       ]
   )
   def initialize_selected_dpt(start_date, end_date, category, clickData, dptosData, pathname):
+    ctx = dash.callback_context
     data = {}
+    print('>> seting data')
+
+    triggers = [x['prop_id'] for x in ctx.triggered]
     
     data['start_date'] = start_date
     data['end_date']   = end_date
     data['category']   = category
     
-    if clickData:
+    ctx_msg = json.dumps({
+        'states': ctx.states,
+        'triggered': ctx.triggered,
+        'inputs': ctx.inputs
+    }, indent=2)
+    print(triggers)
+    if "map-object.clickData" in triggers:
       idx = clickData['points'][0]['pointIndex']
       data['dpto_index'] = idx
-
+    
     print(data)
     return data
 
@@ -91,7 +105,7 @@ def register_callbacks(app):
     
   @app.callback(
       [
-	        Output("wordscloud", "figure"),
+	        Output("wordscloud", "children"),
           Output("map-object", "figure"),
       ],
 	    [
@@ -106,49 +120,38 @@ def register_callbacks(app):
 
 
   def generate_wordcloud(data):
-    print('in')
+    print('in', data)
     where_cond = generate_where_cond(data['start_date'], data['end_date'], data['category'])
     query = f"""
-              SELECT pre_clean_text
+              SELECT pre_clean_text, departamentos, url
               FROM featuring_all  
               {where_cond}
             """
 
+    dpto_index = data.get('dpto_index', -1)
     data = utils.db_get_df(query)
-    print(data[:3])
-    
+
+    if dpto_index != -1:
+      dptos = proccess_dptos(data.copy())
+      dpto = dptos.iloc[dpto_index].name
+
+      print(data.shape)
+      data = data.query('departamentos == @dpto')
+      print(data.shape)
+
+
     common_words = utils.get_top_n_words(data['pre_clean_text'], 100, 1)
-    words = [x[0] for x in common_words]
-    frequency = [x[1] for x in common_words]
+    frequencies = {x[0]:x[1] for x in common_words}
+    wc = WordCloud(background_color='white').generate_from_frequencies(frequencies=frequencies)
     
-    print(common_words)
-    
-    # Normalize values between 15 and 45
-    lower, upper = 8, 60
-    sizes = [((x - min(frequency)) / (max(frequency) - min(frequency))) * (upper - lower) + lower for x in frequency]
+    wc_img = wc.to_image()
+    with BytesIO() as buffer:
+        wc_img.save(buffer, 'png')
+        img2 = base64.b64encode(buffer.getvalue()).decode()
 
-    n = len(common_words)
-    wordscloudFig = go.Scatter(
-                 x=random.choices(range(n), k=n),
-                 y=random.choices(range(n), k=n),
-                 text= words,
-                 mode='text',
-                 hoverinfo='text',
-                 hovertext=['{0}: {1}'.format(w, f) for w, f in zip(words, frequency)],
-                 marker= {'opacity': 0.3},
-                 textfont={'size': sizes,
-                           'color': ["blue", "red", "brown", "green", "grey"]*20})
+    return html.Img(src="data:image/png;base64," + img2)
+           
     
-    return {
-        'data': [wordscloudFig],
-        'layout': go.Layout({
-                    'title' : "Nube de palabras",
-                    'xaxis' : {'showgrid': False, 'showticklabels': False, 'zeroline': False},
-                    'yaxis' : {'showgrid': False, 'showticklabels': False, 'zeroline': False}
-                })
-    }
-    
-
   def generate_map(start_date, end_date, cat):
     where_cond = generate_where_cond(start_date, end_date, cat)
     query = f"""

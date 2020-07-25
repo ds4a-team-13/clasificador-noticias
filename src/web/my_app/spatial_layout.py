@@ -28,7 +28,7 @@ content = dbc.Container(children=[
     html.Div(className="col-5", children=[
       dcc.Graph(id='map-object',)
     ]),
-    html.Div([dcc.Graph( id='wordscloud' ),]),
+    html.Div(className="col-5", id='wordscloud'),
     html.Div(className="col-1"),
   ]),
     
