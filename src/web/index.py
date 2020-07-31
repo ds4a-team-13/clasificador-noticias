@@ -6,10 +6,10 @@ from dash.dependencies import Output, Input
 
 import my_app.temporal_callbacks as tc
 import my_app.spatial_callbacks  as spc
-import my_app.semantic_callbacks as sec
+import my_app.home_callbacks as hoc
 import my_app.temporal_layout as tl
 import my_app.spatial_layout  as spl
-import my_app.semantic_layout as sel
+import my_app.home_layout as hol
 
 external_stylesheets = [dbc.themes.DARKLY]
 app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=external_stylesheets)
@@ -23,7 +23,7 @@ navbar = dbc.NavbarSimple(
             children=[
                 dbc.DropdownMenuItem("More pages", header=True),
                 dbc.DropdownMenuItem("Analisis espacial", href="/spatial"),
-                dbc.DropdownMenuItem("Análisis semántico", href="/semantic"),
+                dbc.DropdownMenuItem("Home", href="/home"),
             ],
             nav=True,
             in_navbar=True,
@@ -57,14 +57,14 @@ def display_page(pathname):
         return tl.content
     elif pathname == "/spatial":
         return spl.content
-    elif pathname == "/semantic":
-        return sel.content
+    elif pathname == "/home":
+        return hol.content
     return tl.content
 
 
 tc.register_callbacks(app)
 spc.register_callbacks(app)
-sec.register_callbacks(app)
+hoc.register_callbacks(app)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
